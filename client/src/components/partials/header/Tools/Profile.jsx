@@ -10,7 +10,6 @@ import Textinput from "@/components/ui/Textinput";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-
 import { CommonService } from "../../../../_services/common.service";
 
 const FormValadtionSchema = yup.object({
@@ -142,8 +141,12 @@ const Profile = (
   };
 
   const logout = () => {
-    localStorage.clear();
+    // localStorage.clear();
     localStorage.removeItem("jwt_Token");
+    localStorage.removeItem("Name");
+    localStorage.removeItem("image");
+    localStorage.removeItem("EmployeeID");
+    localStorage.removeItem("userData");
     navigate("/login");
   };
 

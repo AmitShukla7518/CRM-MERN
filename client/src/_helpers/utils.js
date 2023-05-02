@@ -41,8 +41,18 @@ const removeCookie = (cookieName) => {
   return cookie.remove(cookieName);
 };
 
+/**
+ * @param {*} valueName
+ * @return   Value
+ */
+const getLocalStorage = (valueName) => {
+  let data = JSON.parse(localStorage.getItem(`${valueName}`));
+ 
+};
+
 export const utils = {
   setCookie,
   getCookie,
   removeCookie,
+  getLocalStorage,
 };

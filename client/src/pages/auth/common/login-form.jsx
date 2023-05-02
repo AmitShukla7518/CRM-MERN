@@ -37,6 +37,7 @@ const LoginForm = () => {
         position: "top-right",
       });
       utils.setCookie("jwt_Token", result.JWT_Token);
+      localStorage.setItem("userData",JSON.stringify(result.data));
       localStorage.setItem("jwt_Token", JSON.stringify(result.JWT_Token));
       localStorage.setItem("image", result.data.imgPath);
       localStorage.setItem("Name", result.data.fullname);
